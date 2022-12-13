@@ -1,0 +1,37 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="templates/scorecard/style.css"/>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Boletim</h1>
+            </div>
+            
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                        <tr>
+                            <td>{{ student.name }}</td>
+                            <td>{{ student.score1 }}</td>
+                            <td>{{ student.score2 }}</td>
+                            <td>{{ student.score3 }}</td>
+                            <td>{{ student.mean }}</td>
+                        </tr>
+                    {% endfor %}    
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+
